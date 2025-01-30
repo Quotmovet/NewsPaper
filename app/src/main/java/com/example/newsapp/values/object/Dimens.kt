@@ -24,6 +24,7 @@ object Dimens {
 
     // Indicator dimensions
     val IndicatorSize = 14.dp
+    val IndicatorWidth = 52.dp
 
 
 }

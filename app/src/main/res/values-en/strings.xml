@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Event</string>
+    <string name="actual">Current</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get started</string>
+    <string name="back">Back</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in_with">Sign in with</string>
+    <string name="sign_up_with">Sign up with</string>
+    <string name="get_the_latest">Get the latest news from around the world</string>
+</resources>

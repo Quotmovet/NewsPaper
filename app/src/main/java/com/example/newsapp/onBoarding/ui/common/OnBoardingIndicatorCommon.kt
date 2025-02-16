@@ -11,8 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import com.example.newsapp.values.`object`.Dimens.IndicatorSize
-import com.example.newsapp.values.settings.Purple40
+import com.example.newsapp.values.objects.Dimens.IndicatorSize
 
 @Composable
 fun OnBoardingIndicatorCommon(
@@ -20,7 +19,7 @@ fun OnBoardingIndicatorCommon(
     pageSize: Int,
     selectedPage: Int,
     selectedColor: Color = MaterialTheme.colorScheme.primary,
-    unselectedColor: Color = Purple40
+    unselectedColor: Color = MaterialTheme.colorScheme.secondary
 ){
     Row(
         modifier = modifier,

@@ -42,7 +42,7 @@ fun OnBoardingBackButtonCommon(
             text = text,
             style = MaterialTheme.typography.labelMedium
                 .copy(fontWeight = FontWeight.SemiBold),
-            color = MaterialTheme.colorScheme.onPrimary
+            color = MaterialTheme.colorScheme.primary
         )
     }
 }

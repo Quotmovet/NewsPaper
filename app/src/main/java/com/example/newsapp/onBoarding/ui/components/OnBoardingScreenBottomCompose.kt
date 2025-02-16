@@ -19,14 +19,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.newsapp.onBoarding.data.pages
 import com.example.newsapp.onBoarding.ui.common.OnBoardingBackButtonCommon
+import com.example.newsapp.onBoarding.ui.common.OnBoardingButtonCommon
 import com.example.newsapp.onBoarding.ui.common.OnBoardingIndicatorCommon
-import com.example.newsapp.values.`object`.Dimens.IndicatorWidth
-import com.example.newsapp.values.`object`.Dimens.MediumPadding
+import com.example.newsapp.onBoarding.ui.viewmodel.OnBoardingEvent
+import com.example.newsapp.values.objects.Dimens.IndicatorWidth
+import com.example.newsapp.values.objects.Dimens.LargePadding
 import kotlinx.coroutines.launch
 
 //@OptIn(ExperimentalPagerApi::class)
 @Composable
-fun OnBoardingScreenBottomCompose(){
+fun OnBoardingScreenBottomCompose(
+    event: (OnBoardingEvent) -> Unit
+){
 
     Column(modifier = Modifier.fillMaxSize()) {
 
@@ -54,7 +58,7 @@ fun OnBoardingScreenBottomCompose(){
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = MediumPadding)
+                .padding(horizontal = LargePadding)
                 .navigationBarsPadding(),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -84,10 +88,10 @@ fun OnBoardingScreenBottomCompose(){
                     )
                 }
 
-                OnBoardingBackButtonCommon(text = buttonsState.value[1], onClick = {
+                OnBoardingButtonCommon(text = buttonsState.value[1], onClick = {
                     scope.launch {
-                        if (pagerState.currentPage == 3) {
-                        //TODO Navigate to main screen
+                        if (pagerState.currentPage == 2) {
+                            event(OnBoardingEvent.SaveAppEntry)
                         } else {
                             pagerState.animateScrollToPage(page = pagerState.currentPage + 1)
                         }

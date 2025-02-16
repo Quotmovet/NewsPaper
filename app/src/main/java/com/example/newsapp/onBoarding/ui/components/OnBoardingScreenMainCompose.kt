@@ -14,15 +14,17 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.newsapp.R
 import com.example.newsapp.onBoarding.data.DataOnBoardingScreen
 import com.example.newsapp.onBoarding.data.pages
-import com.example.newsapp.values.`object`.Dimens.LargePadding
-import com.example.newsapp.values.`object`.Dimens.MediumPadding
+import com.example.newsapp.values.objects.Dimens
+import com.example.newsapp.values.objects.Dimens.LargePadding
+import com.example.newsapp.values.objects.Dimens.MediumPadding
+import com.example.newsapp.values.objects.Dimens.SmallPadding
 import com.example.newsapp.values.settings.NewsAppTheme
 
 @Composable
@@ -45,18 +47,18 @@ fun OnBoardingScreenMainCompose(
         Text(
             modifier = Modifier
                 .padding(horizontal = LargePadding),
-            text = page.tittle,
-            style = MaterialTheme.typography.displaySmall
+            text = stringResource(id = page.tittle),
+            style = TextStyle(fontSize = Dimens.TextSize36)
                 .copy(fontWeight = FontWeight.Bold),
-            color = colorResource(id = R.color.black)
+            color = MaterialTheme.colorScheme.primary
         )
 
         Text(
             modifier = Modifier
-                .padding(horizontal = LargePadding),
+                .padding(horizontal = LargePadding, vertical = SmallPadding),
             text = page.description,
-            style = MaterialTheme.typography.displaySmall,
-            color = colorResource(id = R.color.black)
+            style = TextStyle(fontSize = Dimens.TextSize24),
+            color = MaterialTheme.colorScheme.primary
         )
 
         Row(modifier = Modifier) {

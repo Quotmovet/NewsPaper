@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp")
     id("kotlin-parcelize")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -74,8 +75,10 @@ dependencies {
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
 
-    //Coil
+    // Compose Coil&Glide
     implementation(libs.coil.compose)
+    implementation(libs.glide)
+    implementation(libs.glide.compose)
 
     //Datastore
     implementation (libs.androidx.datastore.preferences)

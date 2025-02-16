@@ -1,4 +1,4 @@
-package com.example.newsapp.values.`object`
+package com.example.newsapp.values.objects
 
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -12,6 +12,9 @@ object Dimens {
 
     // Dimensions of typography
     val PrimaryTextSize16 = 16.sp
+    val TextSize36 = 36.sp
+    val TextSize32 = 32.sp
+    val TextSize28 = 28.sp
     val TextSize24 = 24.sp
     val TextSize22 = 22.sp
     val TextSize18 = 18.sp

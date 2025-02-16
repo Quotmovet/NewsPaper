@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">NewsApp</string>
+    <string name="app_name">Событие</string>
+
+    <!-- Titles -->
+    <string name="actual">Актуальное</string>
+
+    <!-- Subtitles -->
+
+    <!-- Buttons -->
+    <string name="next">Далее</string>
+    <string name="get_started">Начать</string>
+    <string name="back">Назад</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_in_with">Войти с помощью</string>
+    <string name="sign_up_with">Зарегистрироваться с помощью</string>
+
+
 </resources>
